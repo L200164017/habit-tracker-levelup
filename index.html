@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelUp - Gamified Habit Tracker</title>
+    <meta name="description" content="Track your habits and tasks while leveling up your life.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="glass-panel header">
+            <div class="profile-section">
+                <div class="avatar-container">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <div class="user-info">
+                    <h1 id="user-level">Level 1</h1>
+                    <div class="xp-bar-container">
+                        <div class="xp-bar-fill" id="xp-bar-fill" style="width: 0%"></div>
+                        <span class="xp-text" id="xp-text">0 / 100 XP</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Habits Section -->
+            <section class="glass-panel section-card">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-fire text-accent"></i> Habits</h2>
+                    <span class="subtitle">Build your streaks</span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="habit-input" placeholder="New habit (e.g., Read 30 mins)...">
+                    <button id="add-habit-btn" class="btn-primary"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div id="habits-list" class="items-list">
+                    <!-- Habits render here -->
+                </div>
+            </section>
+
+            <!-- To-Do Section -->
+            <section class="glass-panel section-card">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-list-check text-accent-2"></i> Quest Log</h2>
+                    <span class="subtitle">One-off tasks</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="todo-input" placeholder="New quest (e.g., Buy Groceries)...">
+                    <button id="add-todo-btn" class="btn-secondary"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div id="todos-list" class="items-list">
+                    <!-- Todos render here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Celebration Container -->
+    <div id="celebration-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
